@@ -11,5 +11,5 @@ import { TotalComponent } from '../total/total.component';
   styleUrl: './calculator.component.scss'
 })
 export class CalculatorComponent {
-
+  
 }

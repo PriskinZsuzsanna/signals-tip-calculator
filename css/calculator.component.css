@@ -1,0 +1,6 @@
+.calculator {
+  width: min(100%, 1200px);
+  background: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+}/*# sourceMappingURL=calculator.component.css.map */

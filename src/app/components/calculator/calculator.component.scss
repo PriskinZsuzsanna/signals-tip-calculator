@@ -1,0 +1,8 @@
+@import '../../../styles/variables';
+
+.calculator {
+  width: min(100%, 1200px);
+  background: $white;
+  border-radius: 1rem;
+  padding: .5rem 1.5rem;
+}

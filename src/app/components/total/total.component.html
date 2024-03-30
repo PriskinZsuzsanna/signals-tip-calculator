@@ -1,6 +1,11 @@
-<div class="total-container">
+<section class="total-container">
   @for (row of calculationResults; track row) {
-    <app-total-row></app-total-row>
+    <app-total-row
+      [label]="row.label"
+      [labelIdentifier]="row.labelIdentifier"
+      [icon]="row.icon"
+      [amount]="row.amount">
+    </app-total-row>
   }
   <button>RESET</button>
-</div>
+</section>

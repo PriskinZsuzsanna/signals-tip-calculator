@@ -8,7 +8,7 @@ import { Component, InputSignal, input } from '@angular/core';
   styleUrl: './select-button.component.scss'
 })
 export class SelectButtonComponent {
-  numberAmount?: InputSignal<number> = input(0);
-  customAmount?: InputSignal<string> = input('');
-  icon?: InputSignal<string> = input('');
+  numberAmount: InputSignal<number | undefined> = input();
+  customAmount: InputSignal<string | undefined> = input();
+  icon: InputSignal<string | undefined> = input();
 }

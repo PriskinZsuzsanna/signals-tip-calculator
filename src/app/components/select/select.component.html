@@ -1,1 +1,17 @@
-<p>select works!</p>
+<section>
+  <p>
+    {{ label() }}
+    <span class="icon">{{ icon() }}</span>
+  </p>
+  <div class="buttons">
+    @for (button of buttons(); track button) {
+      <app-select-button
+        [numberAmount]="button.amount!"
+        [icon]="button.icon!">
+      </app-select-button>
+    }
+    <app-select-button
+      [customAmount]="'Custom'">
+    </app-select-button>
+  </div>
+</section>

@@ -1,23 +1,21 @@
-@import '../../../styles/variables';
-
 .input-background {
-  background: $light-grayish-cyan;
-  border-radius: .3rem;
+  background: hsl(185, 41%, 84%);
+  border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 img {
-  padding-inline: .4rem;
+  padding-inline: 0.4rem;
 }
 
 input {
   border: none;
   outline: none;
-  border-radius: .3rem;
-  padding: .6rem;
-  background: $light-grayish-cyan;
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  background: hsl(185, 41%, 84%);
   width: 100%;
   text-align: right;
 }
@@ -32,4 +30,4 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}
+}/*# sourceMappingURL=input.component.css.map */

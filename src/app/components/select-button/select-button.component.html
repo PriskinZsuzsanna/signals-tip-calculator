@@ -1,1 +1,10 @@
-<p>select-button works!</p>
+@if (numberAmount()) {
+  <button>{{ numberAmount() }}
+    <span>{{ icon() }}</span>
+  </button>
+}
+@if (customAmount()) {
+  <button>{{ customAmount() }}
+    <span>{{ icon() }}</span>
+  </button>
+}

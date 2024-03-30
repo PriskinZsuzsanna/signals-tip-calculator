@@ -12,6 +12,5 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 })
 export class AppComponent {
   title = 'tip-calculator';
-  titleOne: string = 'spli'
-  titleTwo: string = 'tter'
+  logo: string = 'logo.svg'
 }

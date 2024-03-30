@@ -1,4 +1,4 @@
-import { Component, InputSignal, input } from '@angular/core';
+import { Component, InputSignal, Signal, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -8,7 +8,7 @@ import { Component, InputSignal, input } from '@angular/core';
   styleUrl: './input.component.scss'
 })
 export class InputComponent {
-  label: InputSignal<string> = input('')
-  amount: InputSignal<number> = input(0)
-  icon: InputSignal<string> = input('')
+  label: InputSignal<string> = input('');
+  icon: InputSignal<string> = input('');
+  amount: Signal<number> = signal(0);
 }

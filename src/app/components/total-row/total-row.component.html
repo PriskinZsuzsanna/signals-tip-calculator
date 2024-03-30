@@ -1,1 +1,10 @@
-<p>total-row works!</p>
+<div class="flex">
+  <p>
+    {{  label()  }}
+    <span>{{ labelIdentifier() }}</span>
+  </p>
+  <div class="icon">
+    <img src="assets/images/{{icon()}}" alt="{{ icon() }}">
+    {{ amount() }}
+  </div>
+</div>
