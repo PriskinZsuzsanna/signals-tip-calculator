@@ -7,11 +7,12 @@
     @for (button of buttons(); track button) {
       <app-select-button
         [numberAmount]="button.amount!"
-        [icon]="button.icon!">
+        [customAmount]="button.customAmount!"
+        [icon]="button.icon!"
+        [background]="button.background!"
+        [color]="button.color!"
+        (selectedAmount)="onSelectedAmount($event)">
       </app-select-button>
     }
-    <app-select-button
-      [customAmount]="'Custom'">
-    </app-select-button>
   </div>
 </section>

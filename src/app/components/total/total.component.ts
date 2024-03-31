@@ -16,13 +16,13 @@ export class TotalComponent {
     {
       'label': 'Tip Amount',
       'labelIdentifier': '/person',
-      'icon': 'icon-dollar.svg',
+      'icon': '$',
       'amount': this.calculatedPercent()
     },
     {
       'label': 'Total',
       'labelIdentifier': '/person',
-      'icon': 'icon-dollar.svg',
+      'icon': '$',
       'amount': this.calculatedTotal()
     }
   ]

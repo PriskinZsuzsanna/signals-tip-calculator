@@ -4,7 +4,9 @@
     <span>{{ labelIdentifier() }}</span>
   </p>
   <div class="icon">
-    <img src="assets/images/{{icon()}}" alt="{{ icon() }}">
-    {{ amount() }}
+    <span>{{ icon() }}</span>
+    @if (amount()) {
+      <span>{{ amount() }}</span>
+    }
   </div>
 </div>

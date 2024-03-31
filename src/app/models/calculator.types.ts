@@ -1,7 +1,9 @@
 export interface Button {
   amount?: number,
   customAmount?: string, 
-  icon?: string
+  icon?: string,
+  background?: string;
+  color?: string;
 }
 
 export interface TotalRow {

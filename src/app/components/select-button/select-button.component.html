@@ -1,10 +1,21 @@
 @if (numberAmount()) {
-  <button>{{ numberAmount() }}
-    <span>{{ icon() }}</span>
+  <button
+    [style.background]="bg()"
+    [style.color]="textColor()"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    (click)="onSelect(numberAmount()!)">
+    {{ numberAmount() }}
+    <span [style.color]="textColor()">{{ icon() }}</span>
   </button>
 }
 @if (customAmount()) {
-  <button>{{ customAmount() }}
-    <span>{{ icon() }}</span>
+  <button
+    [style.background]="bg()"
+    [style.color]="textColor()"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    (click)="onSelect(customAmount()!)">
+    {{ customAmount() }}
   </button>
 }

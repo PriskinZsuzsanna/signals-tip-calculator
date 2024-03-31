@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+.total-container {
+  background: $very-dark-cyan;
+  color: $white;
+  border-radius: .4rem;
+  padding-inline: 1rem;
+  margin-block: .5rem 1rem;
+}
+
+.reset-btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-block: .5rem;
+  background: $strong-cyan;
+  color: $very-dark-cyan;
+  border-radius: .3rem;
+  cursor: pointer;
+}

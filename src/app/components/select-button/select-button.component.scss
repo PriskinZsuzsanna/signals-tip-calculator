@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  padding-block: .3rem;
+  border-radius: .3rem;
+  font-size: 1.2rem;
+  transition: background .3s, color .3s;
+}

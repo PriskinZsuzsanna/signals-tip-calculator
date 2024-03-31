@@ -24,4 +24,8 @@ export class SelectComponent {
         return EMPTY;
     }))
     , {initialValue: []})
+
+  onSelectedAmount(amount: number | string) {
+    console.log(amount);
+  }
 }

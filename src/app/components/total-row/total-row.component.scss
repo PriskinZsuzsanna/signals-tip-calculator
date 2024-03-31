@@ -1,0 +1,26 @@
+@import '../../../styles/variables';
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  color: $white;
+
+  span {
+    display: block;
+    color: $dark-grayish-cyan;
+    font-size: .8rem;
+  }
+}
+
+.icon {
+  color: $strong-cyan;
+
+  span {
+    color: $strong-cyan;
+    font-size: 1.7rem;
+  }
+}

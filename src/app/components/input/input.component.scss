@@ -16,10 +16,13 @@ input {
   border: none;
   outline: none;
   border-radius: .3rem;
-  padding: .6rem;
+  padding: .4rem;
   background: $light-grayish-cyan;
   width: 100%;
   text-align: right;
+  color: $very-dark-cyan;
+  font-size: 21px;
+  caret-color: $very-dark-cyan;
 }
 
 /* Chrome, Safari, Edge, Opera */

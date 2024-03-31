@@ -1,4 +1,3 @@
-import { I18nPluralPipe } from '@angular/common';
 import { Component, InputSignal, input } from '@angular/core';
 
 @Component({
