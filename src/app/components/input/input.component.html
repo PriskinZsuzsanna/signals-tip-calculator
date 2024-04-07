@@ -2,6 +2,10 @@
   <label [for]="label()">{{ label() }}</label>
   <div class="input-background">
     <img [src]="'assets/images/' + icon()" [alt]="label() + ' icon'">
-    <input type="number" [id]="label()">
+    <input
+      type="number"
+      [id]="label()"
+      [value]="value()"
+      (change)="setValue($event)">
   </div>
 </section>

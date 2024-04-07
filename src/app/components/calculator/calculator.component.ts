@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal, effect, signal } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { SelectComponent } from '../select/select.component';
 import { TotalComponent } from '../total/total.component';
@@ -11,5 +11,11 @@ import { TotalComponent } from '../total/total.component';
   styleUrl: './calculator.component.scss'
 })
 export class CalculatorComponent {
-  
+  billAmount: WritableSignal<number> = signal(0);
+
+  constructor () {
+    effect(() => {
+      console.log(this.billAmount());
+    });
+  }
 }

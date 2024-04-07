@@ -1,14 +1,19 @@
-import { Component, InputSignal, Signal, input, signal } from '@angular/core';
+import { Component, InputSignal, ModelSignal, input, model } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss'
 })
 export class InputComponent {
   label: InputSignal<string> = input('');
   icon: InputSignal<string> = input('');
-  amount: Signal<number> = signal(0);
+  value: ModelSignal<number> = model(0);
+
+  setValue(event:Event) {
+    this.value.set(Number((event.target as HTMLInputElement).value));
+  }
 }
