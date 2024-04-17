@@ -1,4 +1,4 @@
-import { Component, WritableSignal, effect, signal } from '@angular/core';
+import { Component, ModelSignal, WritableSignal, effect, model, signal } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { SelectComponent } from '../select/select.component';
 import { TotalComponent } from '../total/total.component';
@@ -18,4 +18,8 @@ export class CalculatorComponent {
       console.log(this.billAmount());
     });
   }
+
+  /*onValueChangeMethod() { // can be called with (valueChange)=onValueChangeMethod()
+    console.log(this.billAmount());
+  }*/
 }
