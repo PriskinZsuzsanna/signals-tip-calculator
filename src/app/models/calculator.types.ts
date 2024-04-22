@@ -1,6 +1,5 @@
 export interface Button {
-  amount?: number,
-  customAmount?: string, 
+  amount: string,
   icon?: string,
   background?: string;
   color?: string;

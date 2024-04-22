@@ -3,15 +3,17 @@
     <app-input
       label="Bill"
       icon="icon-dollar.svg"
-      [(value)]="billAmount">
+      [(inputValue)]="billAmount">
     </app-input>
     <app-select
       label="Select Tip"
-      icon="%">
+      icon="%"
+      [(selectedAmount)]="selectedAmount">
     </app-select>
     <app-input
       label="Number of People"
-      icon="icon-person.svg">
+      icon="icon-person.svg"
+      [(inputValue)]="numberOfPeople">
     </app-input>
   </article>
   <article>

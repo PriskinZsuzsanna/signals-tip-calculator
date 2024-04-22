@@ -1,4 +1,4 @@
-import { Component, InputSignal, inject, input } from '@angular/core';
+import { Component, InputSignal, ModelSignal, Signal, WritableSignal, inject, input, model, signal } from '@angular/core';
 import { SelectButtonComponent } from '../select-button/select-button.component';
 import { Button } from '../../models/calculator.types';
 import { ButtonService } from '../../services/button.service';
@@ -16,6 +16,7 @@ export class SelectComponent {
   buttonService = inject(ButtonService);
   label: InputSignal<string> = input('');
   icon: InputSignal<string> = input('');
+  selectedAmount: ModelSignal<string> = model('');
   buttons = toSignal(this.buttonService.getButtons
     .pipe(
       map((number => number)),
@@ -25,7 +26,8 @@ export class SelectComponent {
     }))
     , {initialValue: []})
 
-  onSelectedAmount(amount: number | string) {
-    console.log(amount);
+  onSelectedAmount(amount: any) {
+    console.log(amount());
+    //this.selectedAmount.set(amount());
   }
 }

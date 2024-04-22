@@ -11,15 +11,19 @@ import { TotalComponent } from '../total/total.component';
   styleUrl: './calculator.component.scss'
 })
 export class CalculatorComponent {
-  billAmount: WritableSignal<number> = signal(0);
+  billAmount: WritableSignal<string> = signal('');
+  numberOfPeople: WritableSignal<string> = signal('');
+  selectedAmount: WritableSignal<string> = signal('');
 
   constructor () {
     effect(() => {
       console.log(this.billAmount());
     });
+    effect(() => {
+      console.log(this.numberOfPeople());
+    });
+    effect(() => {
+      console.log(this.selectedAmount());
+    });
   }
-
-  /*onValueChangeMethod() { // can be called with (valueChange)=onValueChangeMethod()
-    console.log(this.billAmount());
-  }*/
 }

@@ -6,8 +6,7 @@
   <div class="buttons">
     @for (button of buttons(); track button) {
       <app-select-button
-        [numberAmount]="button.amount!"
-        [customAmount]="button.customAmount!"
+        [amount]="button.amount!"
         [icon]="button.icon!"
         [background]="button.background!"
         [color]="button.color!"

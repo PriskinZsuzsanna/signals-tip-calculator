@@ -12,11 +12,11 @@ import { output } from '@angular/core';
 export class InputComponent {
   label: InputSignal<string> = input('');
   icon: InputSignal<string> = input('');
-  value: ModelSignal<number> = model(0);
-  onValueChange = output<ModelSignal<number>>();
+  inputValue: ModelSignal<string> = model('');
+  //onValueChange = output<ModelSignal<number>>();
 
   setValue(event:Event) {
-    this.value.set(Number((event.target as HTMLInputElement).value));
+    this.inputValue.set((event.target as HTMLInputElement).value);
     //this.onValueChange.emit(this.value);
   }
 }

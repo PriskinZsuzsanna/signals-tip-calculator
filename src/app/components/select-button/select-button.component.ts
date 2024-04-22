@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, InputSignal, Signal, WritableSignal, effect, input, output, signal } from '@angular/core';
+import { AfterContentInit, Component, InputSignal, ModelSignal, WritableSignal, input, model, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-select-button',
@@ -8,14 +8,13 @@ import { AfterContentInit, Component, InputSignal, Signal, WritableSignal, effec
   styleUrl: './select-button.component.scss'
 })
 export class SelectButtonComponent implements AfterContentInit {
-  numberAmount: InputSignal<number | undefined> = input();
-  customAmount: InputSignal<string | undefined> = input();
+  amount: ModelSignal<string> = model('');
   icon: InputSignal<string | undefined> = input();
   background: InputSignal<string | undefined> = input();
   color: InputSignal<string | undefined> = input();
   bg: WritableSignal<string | undefined> = signal('');
   textColor: WritableSignal<string | undefined> = signal('');
-  selectedAmount = output<number | string>();
+  selectedAmount = output<string>();
 
   ngAfterContentInit(): void {
     this.bg.set(this.background());
@@ -31,7 +30,7 @@ export class SelectButtonComponent implements AfterContentInit {
     this.textColor.set(this.color());
   }
 
-  onSelect(amount: number | string) {
-    this.selectedAmount.emit(amount);
+  onSelect() {
+    this.selectedAmount.emit(this.amount());
   }
 }
