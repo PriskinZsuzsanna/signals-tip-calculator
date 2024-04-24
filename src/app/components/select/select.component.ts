@@ -26,8 +26,7 @@ export class SelectComponent {
     }))
     , {initialValue: []})
 
-  onSelectedAmount(amount: any) {
-    console.log(amount());
-    //this.selectedAmount.set(amount());
+  onSelect(amount: InputSignal<string>){
+    this.selectedAmount.set(amount());
   }
 }

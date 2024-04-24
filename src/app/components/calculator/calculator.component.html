@@ -17,6 +17,9 @@
     </app-input>
   </article>
   <article>
-    <app-total></app-total>
+    <app-total
+      [calculatedPercent]="calculatedTip()"
+      [calculatedTotal]="calculatedTotal()">
+    </app-total>
   </article>
 </div>

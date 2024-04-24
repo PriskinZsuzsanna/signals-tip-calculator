@@ -6,11 +6,11 @@
   <div class="buttons">
     @for (button of buttons(); track button) {
       <app-select-button
-        [amount]="button.amount!"
-        [icon]="button.icon!"
-        [background]="button.background!"
-        [color]="button.color!"
-        (selectedAmount)="onSelectedAmount($event)">
+        [amount]="button.amount"
+        [icon]="button.icon"
+        [background]="button.background"
+        [color]="button.color"
+        (onSelected)="onSelect($any($event))">
       </app-select-button>
     }
   </div>

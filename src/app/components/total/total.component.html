@@ -1,11 +1,15 @@
 <section class="total-container">
-  @for (row of calculationResults; track row) {
-    <app-total-row
-      [label]="row.label"
-      [labelIdentifier]="row.labelIdentifier"
-      [icon]="row.icon"
-      [amount]="row.amount">
-    </app-total-row>
-  }
+  <app-total-row
+    [label]="'Tip Amount'"
+    [labelIdentifier]="'/person'"
+    [icon]="'$'"
+    [amount]="calculatedPercent()">
+  </app-total-row>
+  <app-total-row
+    [label]="'Total'"
+    [labelIdentifier]="'/person'"
+    [icon]="'$'"
+    [amount]="calculatedTotal()">
+  </app-total-row>
   <button class="reset-btn">RESET</button>
 </section>

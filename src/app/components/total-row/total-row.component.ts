@@ -8,8 +8,8 @@ import { Component, InputSignal, input } from '@angular/core';
   styleUrl: './total-row.component.scss'
 })
 export class TotalRowComponent {
-  label: InputSignal<string> = input('')
-  labelIdentifier: InputSignal<string> = input('')
-  amount: InputSignal<number> = input(0)
-  icon: InputSignal<string> = input('')
+  label: InputSignal<string> = input('');
+  labelIdentifier: InputSignal<string> = input('');
+  amount: InputSignal<number> = input(0);
+  icon: InputSignal<string> = input('');
 }
