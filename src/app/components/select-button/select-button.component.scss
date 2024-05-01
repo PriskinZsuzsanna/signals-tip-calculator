@@ -3,6 +3,7 @@
 button {
   border: none;
   outline: none;
+  height: 40px;
   cursor: pointer;
   text-align: center;
   width: 100%;
@@ -16,10 +17,3 @@ span {
   transition: background .3s, color .3s;
 }
 
-input {
-  width: 100%;
-  padding-block: .3rem;
-  border-radius: .3rem;
-  font-size: 1rem;
-  text-align: right;
-}

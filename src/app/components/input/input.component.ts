@@ -13,10 +13,11 @@ export class InputComponent {
   label: InputSignal<string> = input('');
   icon: InputSignal<string> = input('');
   inputValue: ModelSignal<string> = model('');
-  //onValueChange = output<ModelSignal<number>>();
+  valueChange = output<ModelSignal<string>>();
 
   setValue(event:Event) {
+    console.log((event.target as HTMLInputElement).value)
     this.inputValue.set((event.target as HTMLInputElement).value);
-    //this.onValueChange.emit(this.value);
+    this.valueChange.emit(this.inputValue);
   }
 }

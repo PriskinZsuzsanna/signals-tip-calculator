@@ -13,7 +13,10 @@
       </span>
     </button>
   } @else {
-    <input
-      type="text"
-      [value]="amount()">
+    <app-input
+      label=""
+      icon=""
+      [(inputValue)]="amount"
+      (valueChange)="onValueChange($event)"
+    ></app-input>
   }

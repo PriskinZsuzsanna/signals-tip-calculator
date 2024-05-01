@@ -21,7 +21,6 @@ input {
   width: 100%;
   text-align: right;
   color: $very-dark-cyan;
-  font-size: 21px;
   caret-color: $very-dark-cyan;
 }
 
@@ -35,4 +34,8 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+span.percent {
+  padding-left: 1rem;
 }
