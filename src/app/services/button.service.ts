@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { toObservable } from '@angular/core/rxjs-interop';
-import { EMPTY, catchError, from } from 'rxjs';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

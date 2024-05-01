@@ -1,6 +1,5 @@
-import { Component, InputSignal, effect, input } from '@angular/core';
+import { Component, InputSignal, ModelSignal, effect, input, output } from '@angular/core';
 import { TotalRowComponent } from '../total-row/total-row.component';
-import { TotalRow } from '../../models/calculator.types';
 
 @Component({
   selector: 'app-total',
@@ -12,10 +11,10 @@ import { TotalRow } from '../../models/calculator.types';
 export class TotalComponent {
   calculatedPercent: InputSignal<number> = input(0);
   calculatedTotal: InputSignal<number> = input(0);
+  reset = output();
 
-  constructor() {
-    effect(() => {
-      console.log(this.calculatedTotal());
-    })
+
+  onReset() {
+    this.reset.emit();
   }
 }

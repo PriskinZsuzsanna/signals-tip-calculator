@@ -10,6 +10,7 @@
         [icon]="button.icon"
         [background]="button.background"
         [color]="button.color"
+        [selected]="button.amount === selectedAmount()"
         (onSelected)="onSelect($any($event))">
       </app-select-button>
     }

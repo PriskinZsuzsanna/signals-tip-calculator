@@ -19,7 +19,8 @@
   <article>
     <app-total
       [calculatedPercent]="calculatedTip()"
-      [calculatedTotal]="calculatedTotal()">
+      [calculatedTotal]="calculatedTotal()"
+      (reset)="onReset()">
     </app-total>
   </article>
 </div>

@@ -1,9 +1,10 @@
 import { AfterContentInit, Component, InputSignal, ModelSignal, Signal, WritableSignal, input, model, output, signal } from '@angular/core';
+import { InputComponent } from '../input/input.component';
 
 @Component({
   selector: 'app-select-button',
   standalone: true,
-  imports: [],
+  imports: [InputComponent],
   templateUrl: './select-button.component.html',
   styleUrl: './select-button.component.scss'
 })
@@ -12,25 +13,26 @@ export class SelectButtonComponent implements AfterContentInit {
   icon: InputSignal<string | undefined> = input();
   background: InputSignal<string | undefined> = input();
   color: InputSignal<string | undefined> = input();
-  bg: WritableSignal<string | undefined> = signal('');
-  textColor: WritableSignal<string | undefined> = signal('');
+  scale: WritableSignal<string> = signal('1');
+  selected:  ModelSignal<boolean> = model(false);
   onSelected = output<Signal<string>>();
+  isInput: boolean = false
 
   ngAfterContentInit(): void {
-    this.bg.set(this.background());
-    this.textColor.set(this.color());
+    this.isInput = false
   }
 
   onMouseEnter() {
-    this.bg.set('hsl(172, 67%, 45%)');
-    this.textColor.set('hsl(183, 100%, 15%)')
+    this.scale.set('.8');
   }
   onMouseLeave() {
-    this.bg.set(this.background());
-    this.textColor.set(this.color());
   }
 
-  onSelect() {
+  onSelect(event:Event) {
+    if(this.amount() === 'Custom') {
+      this.isInput = true;
+    }
     this.onSelected.emit(this.amount);
+    this.selected.set(true);
   }
 }

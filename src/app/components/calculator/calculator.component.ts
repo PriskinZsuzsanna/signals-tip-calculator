@@ -12,33 +12,30 @@ import { TotalComponent } from '../total/total.component';
 })
 export class CalculatorComponent implements OnInit{
   billAmount: WritableSignal<string> = signal('');
-  numberOfPeople: WritableSignal<string> = signal('');
+  numberOfPeople: WritableSignal<string> = signal('1');
   selectedAmount: WritableSignal<string> = signal('');
   calculatedTip: Signal<number> = signal(0);
   calculatedTotal: Signal<number> = signal(0);
 
-  constructor () {
-    effect(() => {
-      console.log(this.billAmount());
-    });
-    effect(() => {
-      console.log(this.numberOfPeople());
-    });
-    effect(() => {
-      console.log(this.selectedAmount());
-    });
-  }
-
   ngOnInit(): void {
     this.calculatedTip = computed(() => {
-      return Number(this.billAmount()) * (Number(this.selectedAmount()) * 0.01);
+      return Number((Number(this.billAmount()) * (Number(this.selectedAmount()) * 0.01) / Number(this.numberOfPeople())).toFixed(2));
     });
     this.calculatedTotal = computed(() => {
       let value: number = 0
-      if(this.billAmount() && this.numberOfPeople()) {
+      if (this.billAmount()) {
+        value = Number(this.billAmount());
+      }
+      if (this.billAmount() && this.numberOfPeople()) {
         value = Number((Number(this.billAmount()) / Number(this.numberOfPeople())).toFixed(2));
       }
       return value
     });
+  }
+
+  onReset() {
+    this.billAmount.set('');
+    this.numberOfPeople.set('1');
+    this.selectedAmount.set('');
   }
 }
