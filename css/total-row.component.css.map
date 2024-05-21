@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"total-row.component.css"}
+{"version":3,"sourceRoot":"","sources":["../src/app/components/total-row/total-row.component.scss","../src/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;;AAGF;EACE,OCHM;;ADKN;EACE;EACA,OCXgB;EDYhB;;;AAIJ;EACE,OCnBY;;ADqBZ;EACE,OCtBU;EDuBV","file":"total-row.component.css"}

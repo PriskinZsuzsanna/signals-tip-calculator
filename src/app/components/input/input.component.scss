@@ -1,11 +1,21 @@
 @import '../../../styles/variables';
 
+section.button {
+  padding-block: 0 !important;
+}
+
 .input-background {
   background: $light-grayish-cyan;
   border-radius: .3rem;
   display: flex;
   align-items: center;
   margin-top: .5rem;
+  
+  &.button {
+    margin-top: 0;
+    height: 40px;
+    width: 100%;
+  }
 }
 
 img {

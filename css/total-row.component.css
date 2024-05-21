@@ -1,1 +1,22 @@
-/*# sourceMappingURL=total-row.component.css.map */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  color: hsl(0, 0%, 100%);
+}
+p span {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  font-size: 0.8rem;
+}
+
+.icon {
+  color: hsl(172, 67%, 45%);
+}
+.icon span {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.7rem;
+}/*# sourceMappingURL=total-row.component.css.map */

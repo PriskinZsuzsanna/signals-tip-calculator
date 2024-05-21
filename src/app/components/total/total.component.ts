@@ -1,4 +1,4 @@
-import { Component, InputSignal, ModelSignal, effect, input, output } from '@angular/core';
+import { Component, InputSignal, input, output } from '@angular/core';
 import { TotalRowComponent } from '../total-row/total-row.component';
 
 @Component({

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"total.component.css"}
+{"version":3,"sourceRoot":"","sources":["../src/app/components/total/total.component.scss","../src/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE,YCFe;EDGf,OCEM;EDDN;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA,YCfY;EDgBZ,OCfe;EDgBf;EACA","file":"total.component.css"}

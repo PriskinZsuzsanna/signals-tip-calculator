@@ -1,4 +1,4 @@
-import { Component, InputSignal, ModelSignal, Signal, WritableSignal, inject, input, model, signal } from '@angular/core';
+import { Component, InputSignal, ModelSignal, WritableSignal, inject, input, model, signal } from '@angular/core';
 import { SelectButtonComponent } from '../select-button/select-button.component';
 import { ButtonService } from '../../services/button.service';
 import { EMPTY, catchError, map } from 'rxjs';
@@ -17,6 +17,8 @@ export class SelectComponent {
   icon: InputSignal<string> = input('');
   selectedAmount: ModelSignal<string> = model('');
   selected : WritableSignal<boolean> = signal(false);
+  isInput = input<boolean>(false);
+
   buttons = toSignal(this.buttonService.getButtons
     .pipe(
       map((number => number)),
@@ -28,5 +30,6 @@ export class SelectComponent {
 
   onSelect(amount: InputSignal<string>){
     this.selectedAmount.set(amount());
+    this.selected.set(true);
   }
 }

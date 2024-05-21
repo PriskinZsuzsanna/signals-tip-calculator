@@ -14,6 +14,7 @@ export class InputComponent {
   icon: InputSignal<string> = input('');
   inputValue: ModelSignal<string> = model('');
   valueChange = output<ModelSignal<string>>();
+  buttonInput = input<boolean>(false);
 
   setValue(event:Event) {
     console.log((event.target as HTMLInputElement).value)
